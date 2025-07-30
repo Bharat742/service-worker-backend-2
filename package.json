@@ -1,21 +1,16 @@
 {
   "name": "pwa-backend",
   "version": "1.0.0",
-  "description": "This is a service worker backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo 'Nothing to build for backend'"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC", 
   "dependencies": {
-    "body-parser": "^2.2.0",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.1",
     "express": "^4.18.2",
-    "mongoose": "^8.16.5",
-    "web-push": "^3.6.7"
+    "mongoose": "^7.4.0",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "web-push": "^3.6.0"
   }
 }
