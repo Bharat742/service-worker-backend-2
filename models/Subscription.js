@@ -1,5 +1,4 @@
-// models/Subscription.js
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const subscriptionSchema = new mongoose.Schema({
   endpoint: { type: String, unique: true },
@@ -10,4 +9,4 @@ const subscriptionSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model('Subscription', subscriptionSchema);
+module.exports = mongoose.model('Subscription', subscriptionSchema);
