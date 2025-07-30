@@ -1,6 +1,5 @@
-// routes/subscribe.js
-import express from 'express';
-import Subscription from '../models/Subscription.js';
+const express = require('express');
+const Subscription = require('../models/Subscription');
 
 const router = express.Router();
 
@@ -21,4 +20,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
