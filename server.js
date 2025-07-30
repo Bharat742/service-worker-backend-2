@@ -1,10 +1,11 @@
 // server.js
-import express from 'express';
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-import webPush from 'web-push';
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const webPush = require('web-push');
+const path = require('path');
 
 // Load env vars
 dotenv.config();
@@ -27,8 +28,8 @@ app.use(cors({ origin: '*', methods: ['GET', 'POST'], allowedHeaders: ['Content-
 app.use(bodyParser.json());
 
 // Routes
-import subscribeRoute from './routes/subscribe.js';
-import notifyRoute from './routes/notify.js';
+const subscribeRoute = require('./routes/subscribe');
+const notifyRoute = require('./routes/notify');
 
 app.use('/subscribe', subscribeRoute);
 app.use('/sendNotification', notifyRoute);
