@@ -1,7 +1,6 @@
-// routes/notify.js
-import express from 'express';
-import webPush from 'web-push';
-import Subscription from '../models/Subscription.js';
+const express = require('express');
+const webPush = require('web-push');
+const Subscription = require('../models/Subscription');
 
 const router = express.Router();
 
@@ -31,4 +30,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
